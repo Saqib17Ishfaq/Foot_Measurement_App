@@ -1,0 +1,21 @@
+# Local Python environments and generated files
+foot_measurement_env/
+__pycache__/
+*.py[cod]
+*.pyd
+
+# Local runtime output
+temp_result.jpg
+.kivy/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+bin/
+.buildozer/
+*.apk
+*.aab

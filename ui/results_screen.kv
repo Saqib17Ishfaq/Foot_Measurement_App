@@ -1,0 +1,54 @@
+# results_screen.kv
+<ResultsScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 15
+        
+        Label:
+            text: 'Measurement Results'
+            font_size: '24sp'
+            size_hint_y: 0.15
+            bold: True
+        
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: 0.6
+            spacing: 10
+            
+            Label:
+                id: result_label
+                text: 'Foot Length: Calculating...'
+                font_size: '18sp'
+                text_size: self.width, None
+                halign: 'center'
+            
+            Label:
+                id: size_label
+                text: 'Recommended Size: --'
+                font_size: '18sp'
+                text_size: self.width, None
+                halign: 'center'
+            
+            Image:
+                id: result_image
+                source: ''
+                size_hint_y: 0.7
+                allow_stretch: True
+        
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.25
+            spacing: 10
+            
+            Button:
+                text: 'Measure Again'
+                on_press: root.measure_again()
+                font_size: '16sp'
+                background_color: 0.2, 0.6, 1, 1
+            
+            Button:
+                text: 'Save Results'
+                on_press: root.save_results()
+                font_size: '16sp'
+                background_color: 0, 0.7, 0, 1

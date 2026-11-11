@@ -1,0 +1,12 @@
+kivy==2.3.0
+opencv-python==4.8.1.78
+mediapipe==0.10.5
+numpy==1.24.3
+Pillow==9.5.0
+plyer==2.1.0
+buildozer==1.5.0
+cython==0.29.36
+
+
+
+

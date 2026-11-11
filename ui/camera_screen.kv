@@ -1,0 +1,44 @@
+# camera_screen.kv
+<CameraScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+        
+        Label:
+            text: 'Foot Measurement App'
+            font_size: '20sp'
+            size_hint_y: 0.1
+            bold: True
+        
+        CameraWidget:
+            id: camera_widget
+            size_hint_y: 0.7
+        
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: 0.2
+            spacing: 5
+            
+            Label:
+                id: instruction_label
+                text: 'Place your foot next to an A4 paper for calibration'
+                font_size: '14sp'
+                text_size: self.width, None
+                halign: 'center'
+            
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint_y: 0.6
+                spacing: 10
+                
+                Button:
+                    text: 'Calibrate Reference'
+                    on_press: root.calibrate_reference()
+                    font_size: '14sp'
+                
+                Button:
+                    text: 'Measure Foot'
+                    on_press: root.measure_foot()
+                    font_size: '14sp'
+                    background_color: 0, 0.7, 0, 1
